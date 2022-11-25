@@ -17,11 +17,11 @@ void* createNode(void *arg)
 		(*fptr[1])((void*)"failure");
 	}
 
-	new->next=NULL;
-	new->info=value++;
+	new->next=NULL; // initializes next pointer to NULL
+	new->info=value++; // initializes info to value
 
 #ifdef PRINT
         printf("%s :	End \n",__func__);
 #endif
-	return (void*)new;
+	return (void*)new; // returns address of newly created node 
 }
