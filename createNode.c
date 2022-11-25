@@ -21,7 +21,7 @@ void* createNode(void *arg)
 	new->info=value++;
 
 #ifdef PRINT
-        printf("%s : Begin \n",__func__);
+        printf("%s :	End \n",__func__);
 #endif
 	return (void*)new;
 }

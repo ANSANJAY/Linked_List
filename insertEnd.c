@@ -2,7 +2,7 @@
 #include"declarations.h"
 #include"dataStruct.h"
 
-void* insertEnd(void* arg)
+void* insertEnd(void* arg) // arg is START
 {
 #ifdef PRINT
 	printf("%s : Begin \n",__func__);

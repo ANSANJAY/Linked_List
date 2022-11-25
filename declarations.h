@@ -1,4 +1,7 @@
-#define NOF 15
+/* function pointer declaration
+ */
+
+#define NOF 20
 #define PRINT
 
 int init();
@@ -18,10 +21,15 @@ extern void* insertEnd(void*);
 extern void* insertNth(void*);
 extern void* insertKey(void*);
 
+extern void* deleteMenu(void*);
+extern void* deleteBeg(void*);
+extern void* deleteEnd(void*);
+extern void* deleteNth(void*);
+extern void* deleteKey(void*);
 
 
 
 extern int value;
 
-extern void* (*fptr[NOF])(void*);
+extern void* (*fptr[NOF])(void*);//array of function pointer
 

@@ -4,8 +4,20 @@ CC=gcc
 DF= -g
 CF= -c
 
-linklist:main.o mainMenu.o createLinklist.o insertNode.o deleteNode.o displayLinklist.o sortLinklist.o init.o exitProgram.o createNode.o insertMenu.o insertBeg.o insertEnd.o insertNth.o insertKey.o
-	${CC} -o linklist main.o mainMenu.o createLinklist.o insertNode.o deleteNode.o displayLinklist.o sortLinklist.o init.o exitProgram.o createNode.o insertMenu.o insertBeg.o insertEnd.o insertNth.o insertKey.o
+linklist:main.o mainMenu.o createLinklist.o insertNode.o deleteNode.o displayLinklist.o sortLinklist.o init.o exitProgram.o createNode.o insertMenu.o insertBeg.o insertEnd.o insertNth.o insertKey.o deleteMenu.o deleteBeg.o deleteEnd.o deleteNth.o deleteKey.o
+	${CC} -o linklist main.o mainMenu.o createLinklist.o insertNode.o deleteNode.o displayLinklist.o sortLinklist.o init.o exitProgram.o createNode.o insertMenu.o insertBeg.o insertEnd.o insertNth.o insertKey.o deleteMenu.o deleteBeg.o deleteEnd.o deleteNth.o deleteKey.o
+
+deleteMenu.o: deleteMenu.c headers.h dataStruct.h declarations.h
+	${CC} -c deleteMenu.c
+deleteBeg.o: deleteBeg.c headers.h dataStruct.h declarations.h
+	${CC} -c deleteBeg.c
+deleteEnd.o: deleteEnd.c headers.h dataStruct.h declarations.h
+	${CC} -c deleteEnd.c
+deleteNth.o: insertBeg.c headers.h dataStruct.h declarations.h
+	${CC} -c deleteNth.c
+
+deleteKey.o: deleteKey.c headers.h dataStruct.h declarations.h
+	${CC} -c deleteKey.c
 
 insertBeg.o: insertBeg.c headers.h dataStruct.h declarations.h
 	${CC} -c insertBeg.c

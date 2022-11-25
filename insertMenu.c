@@ -32,13 +32,13 @@ void* insertMenu(void* arg)
         scanf("%d",&i);
        }
              if ((i>=1) && (i<=4))
-                        (*fptr[i+8])(arg);
+                        (*fptr[i+8])(arg); //arg : START
 
 
 RET:
 
 #ifdef PRINT
-        printf("%s : Begin \n",__func__);
+        printf("%s : End  \n",__func__);
 #endif
 	return (void*)start;
 }

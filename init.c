@@ -17,6 +17,12 @@ void* insertBeg(void*);
 void* insertEnd(void*);
 void* insertNth(void*);
 void* insertKey(void*);
+void* deleteMenu(void*);
+void* deleteBeg(void*);
+void* deleteEnd(void*);
+void* deleteNth(void*);
+void* deleteKey(void*);
+
 
 
 int value;
@@ -44,7 +50,11 @@ fptr[9]=insertBeg;
 fptr[10]=insertEnd;
 fptr[11]=insertNth;
 fptr[12]=insertKey;
-
+fptr[13]=deleteMenu;
+fptr[14]=deleteBeg;
+fptr[15]=deleteEnd;
+fptr[16]=deleteNth;
+fptr[17]=deleteKey;
 
 
 
@@ -52,7 +62,7 @@ fptr[12]=insertKey;
 value =11;
 
 #ifdef PRINT
-        printf("%s : Begin \n",__func__);
+        printf("%s :	End	  \n",__func__);
 #endif
 		return 0;
 }

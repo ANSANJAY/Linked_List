@@ -13,7 +13,7 @@ void* exitProgram(void *arg)
 	exit(EXIT_FAILURE);
 
 #ifdef PRINT
-        printf("%s : Begin \n",__func__);
+        printf("%s : End  \n",__func__);
 #endif
 	return 0;
 }
