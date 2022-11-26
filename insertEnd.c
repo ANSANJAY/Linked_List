@@ -12,10 +12,18 @@ void* insertEnd(void* arg) // arg is START
 	lst=sta=(Node*)arg; // incoming arg (start address) is given to both the pointers
 	
 	while(lst->next)// while the node is pointing to other node , next is not NULL
-	lst = lst->next ;	
+	{
+		lst = lst->next ;
+	}	
 
 	lst->next=(Node*)(*fptr[7])(0);//creating new node , address of newly created node is stored is last -> next  
-	printf("%d\n",lst->info);
+	printf("new node value :%d\n",lst->info);
+	printf("new node address :%p\n",lst->next);
+
+
+	printf("start pointer : %p\n",sta);
+	 printf("last pointer : %p\n",lst);
+
 #ifdef PRINT
         printf("%s : End \n",__func__);
 #endif
